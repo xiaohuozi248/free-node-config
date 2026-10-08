@@ -1411,5 +1411,21 @@ proxy-groups:
   - 🇺🇸US-54.213.128.173-5645
   - 🇰🇷KR-43.203.122.206-5648
 rules:
-- GEOIP,CN,DIRECT
+- GEOSITE,cn,DIRECT
+- GEOIP,CN,DIRECT,no-resolve
 - MATCH,🚀 节点选择
+dns:
+  enable: true
+  ipv6: false
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  nameserver:
+  - 223.5.5.5
+  - 119.29.29.29
+  - https://doh.pub/dns-query
+  fallback:
+  - https://1.1.1.1/dns-query
+  - https://8.8.8.8/dns-query
+  fallback-filter:
+    geoip: true
+    geoip-code: CN
