@@ -433,6 +433,8 @@ proxies:
   server: guanwang.awsno.com
   port: 443
   uuid: 6a89a215-22bf-4bd7-9642-b95b2e09583a
+  alterId: 0
+  cipher: auto
   tls: true
   servername: guanwang.awsno.com
   network: ws
